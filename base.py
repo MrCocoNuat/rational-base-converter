@@ -58,7 +58,11 @@ alphabet = None
 def err(*args,**kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-
+#user probably doesn't know how to use:
+if len(sys.argv) == 1:
+    print("Type 'python base.py -h' to see usage help")
+    exit(999)
+    
 #skip the execution name, ingest arguments
 for arg in sys.argv[1:]: 
     #arg is an option?
